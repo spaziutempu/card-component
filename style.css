@@ -1,0 +1,162 @@
+/**** sp4 *****/
+
+/*font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif; */
+
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: hsl(30, 38%, 92%);
+
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  transition: 250ms;
+
+  margin: 0 auto;
+  max-width: 375px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/*********************
+Image Part
+*********************/
+
+.image img {
+  max-width: 100%;
+}
+
+.img_desktop {
+  display: none;
+  border-radius: 10px 0 0 10px;
+}
+.img_mobile {
+  display: block;
+  border-radius: 10px 10px 0 0;
+}
+
+/*****************
+Card part
+*******************/
+
+.card {
+  margin: 0;
+  padding: 1em 2em;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card_product {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card_title {
+  margin: 0.5em 0;
+  color: hsl(212, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-size: 1.75rem;
+  max-width: 90%;
+}
+
+.card_pitch {
+  width: 92%;
+  line-height: 1.5;
+}
+
+.card_price {
+  font-family: "Fraunces", serif;
+  color: hsl(158, 36%, 37%);
+  font-size: 2.2rem;
+  margin-right: 0.5em;
+}
+
+.card_discount {
+  text-decoration: line-through;
+}
+
+.card_cart {
+  padding-right: 0.5em;
+}
+
+.card_btn {
+  width: 100%;
+
+  margin: 0.2em 0 0.5em;
+  padding: 1.2em;
+
+  border-radius: 10px;
+  border: none;
+
+  background: hsl(158, 36%, 37%);
+  color: white;
+
+  font-family: "Fraunces", serif;
+  cursor: pointer;
+  transform: scale(1);
+  transition: 250ms;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .card_btn:focus,  */
+.card_btn:hover {
+  transform: scale(1.05);
+}
+
+.card_btn:active {
+  background: hsl(212, 21%, 14%);
+}
+
+/****************
+Medias Queries
+******************/
+
+@media (min-width: 900px) {
+  .container {
+    max-width: 600px;
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .image .img_desktop {
+    display: block;
+  }
+  .image .img_mobile {
+    display: none;
+  }
+
+  .image {
+    width: 55vw;
+  }
+
+  .card {
+    width: 45vw;
+  }
+
+  .card_price {
+    margin-right: 0;
+  }
+}
